@@ -1,0 +1,150 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 245px;
+  min-width: 245px;
+  background: #15213b;
+  color: white;
+  padding: 26px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0 12px 30px;
+}
+
+.brand-icon {
+  background: #3b82f6;
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.brand strong {
+  display: block;
+  font-size: 19px;
+}
+
+.brand small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  color: #cbd5e1;
+  text-decoration: none;
+  border-radius: 9px;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  background: #263d67;
+  color: white;
+}
+
+.navigation span {
+  font-size: 20px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 15px;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  font-weight: 600;
+}
+
+.environment {
+  color: #16a34a;
+  font-size: 12px;
+}
+
+.page-content {
+  padding: 30px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    padding: 15px;
+  }
+
+  .brand {
+    padding-bottom: 12px;
+  }
+
+  .navigation {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .navigation a {
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .topbar {
+    padding: 15px;
+    height: auto;
+  }
+
+  .page-content {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,69 @@
+
+<div class="app-layout">
+
+  <aside class="sidebar">
+
+    <div class="brand">
+      <div class="brand-icon">M</div>
+      <div>
+        <strong>MicroBill</strong>
+        <small>Gestion commerciale</small>
+      </div>
+    </div>
+
+    <nav class="navigation">
+
+      <a
+        routerLink="/dashboard"
+        routerLinkActive="active"
+      >
+        <span>▦</span>
+        Tableau de bord
+      </a>
+
+      <a
+        routerLink="/customers"
+        routerLinkActive="active"
+      >
+        <span>♙</span>
+        Clients
+      </a>
+
+      <a
+        routerLink="/products"
+        routerLinkActive="active"
+      >
+        <span>▣</span>
+        Produits
+      </a>
+
+      <a
+        routerLink="/bills"
+        routerLinkActive="active"
+      >
+        <span>▤</span>
+        Factures
+      </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      Spring Boot + Angular
+    </div>
+
+  </aside>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <span>Application de facturation</span>
+      <span class="environment">● Développement local</span>
+    </header>
+
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </main>
+
+</div>
