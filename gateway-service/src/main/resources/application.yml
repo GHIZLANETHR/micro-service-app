@@ -4,3 +4,11 @@ server:
 spring:
   application:
     name: gateway-service
+
+  cloud:
+    config:
+      enabled: false
+
+eureka:
+  client:
+    enabled: false
