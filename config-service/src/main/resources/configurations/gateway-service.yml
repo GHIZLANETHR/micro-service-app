@@ -1,0 +1,32 @@
+
+server:
+  port: 8888
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: customer-route
+              uri: lb://customer-service
+              predicates:
+                - Path=/customers/**
+
+            - id: inventory-route
+              uri: lb://inventory-service
+              predicates:
+                - Path=/products/**
+
+            - id: billing-route
+              uri: lb://billing-service
+              predicates:
+                - Path=/bills/**
+
+eureka:
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
