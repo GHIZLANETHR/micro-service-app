@@ -24,6 +24,11 @@ spring:
               predicates:
                 - Path=/products/**
 
+            - id: billing-route
+              uri: lb://billing-service
+              predicates:
+                - Path=/bills/**
+
 eureka:
   client:
     enabled: true
